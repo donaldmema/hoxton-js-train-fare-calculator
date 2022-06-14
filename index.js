@@ -5,9 +5,26 @@ let departure = prompt(`Are you traveling from:
 - Konya
 - Antalya`);
 
+while (
+  departure !== "Istanbul" &&
+  departure !== "Konya" &&
+  departure !== "Antalya"
+) {
+  departure = prompt(`Select starting point from the list below:
+- Istanbul
+- Konya
+- Antalya`);
+}
+
 let destination = prompt(`Where are you traveling to:
 - Izmir
 - Ankara`);
+
+while (destination !== "Izmir" && destination !== "Ankara") {
+  departure = prompt(`Select destination from the list below:
+- Izmir
+- Ankara`);
+}
 
 const pricePerKm = 0.21;
 
@@ -23,7 +40,7 @@ function calcPrice(age, distance) {
   if (age < 18) {
     price = price * 0.8;
   } else if (age > 65) {
-    price = price * 0.4;
+    price = price * 0.6;
   }
   return console.log(
     `You will need to pay £${price.toFixed(
