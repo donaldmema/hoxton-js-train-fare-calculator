@@ -21,7 +21,7 @@ let destination = prompt(`Where are you traveling to:
 - Ankara`);
 
 while (destination !== "Izmir" && destination !== "Ankara") {
-  departure = prompt(`Select destination from the list below:
+  destination = prompt(`Select destination from the list below:
 - Izmir
 - Ankara`);
 }
